@@ -1,0 +1,75 @@
+\documentclass{hebrew-academic-template}
+
+% הגדרות שפה ופונטים לעבודה דו-לשונית תקינה (BiDi)
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+
+\title{ארכיטקטורה ומימוש של סוכן עוזר לסטודנט (Student Assistant Agent)}
+\author{צוות פיתוח אקדמי}
+\date{יוני 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+תקציר המסמך: דוח זה מציג אפיון, ארכיטקטורה ומימוש של סוכן AI אוטונומי המיועד לאופטימיזציה של תהליכי למידה אקדמיים וניהול עומסי קצה של סטודנטים. המסמך נכתב ומנוהל תחת עקרונות הנדסת תוכנה קפדניים וראפטביליות מלאה.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+% ---------------------------------------------------------
+% פרק 1: מבוא והגדרת הבעיה
+% ---------------------------------------------------------
+\hebrewsection{מבוא והגדרת הבעיה}
+בפרק זה נתאר את האתגרים הניצבים בפני סטודנטים בניהול לוחות זמנים עמוסים, ריכוז חומרי לימוד ועומס קוגניטיבי בסוף סמסטר.
+
+% ---------------------------------------------------------
+% פרק 2: ארכיטקטורת שלוש השכבות של הסוכן
+% ---------------------------------------------------------
+\hebrewsection{ארכיטקטורת שלוש השכבות של הסוכן}
+הסוכן מורכב משלוש שכבות מובנות: שכבת התוכנה הבסיסית, שכבת הסקיל הסטטי, ושכבת הסוכן האוטונומי הכוללת את מנוע החשיבה וה-RAG.
+
+% ---------------------------------------------------------
+% פרק 3: פרוטוקול MCP והרחבות מערכת
+% ---------------------------------------------------------
+\hebrewsection{תקשורת ופרוטוקול \en{Model Context Protocol (MCP)}}
+סקירת השילוב של פרוטוקול MCP לאינטגרציה חיה מול מאגרי קוד (GitHub) ומערכות מידע ארגוניות בזמן אמת.
+
+% ---------------------------------------------------------
+% פרק 4: מימוש טכני בקוד פייתון
+% ---------------------------------------------------------
+\hebrewsection{מימוש טכני ומבנה הקוד}
+להלן דוגמה למבנה הלוגיקה הבסיסי של הסוכן כפי שפותח בתיקיית הפרויקט:
+
+\begin{pythonbox}
+# Student Assistant Agent Core Logic
+import os
+
+class StudentAgent:
+    def __init__(self, context_window):
+        self.context = context_window
+        self.skills = []
+
+    def load_skill(self, skill_name):
+        print(f"Loading skill: {skill_name}")
+\end{pythonbox}
+
+% ---------------------------------------------------------
+% פרק 5: אורקסטרציה ובקרת איכות (QA)
+% ---------------------------------------------------------
+\hebrewsection{אורקסטרציה של סוכנים ובקרת איכות}
+ניהול מערך ה-QA של המסמך באמצעות סוכן-על \en{qa-super} המנהל תתי-סוכנים ייעודיים.
+
+\newpage
+% רשימת מקורות בפורמט IEEE
+\begin{thebibliography}{99}
+\bibitem{mcp} X. Hou, Y. Zhao, S. Wang, and H. Wang, "Model context protocol (MCP): Landscape, security threats, and future research directions," arXiv, 2025.
+\bibitem{orchestra} W. Zhang et al., "AgentOrchestra: A hierarchical multi-agent framework for complex task solving," 2025.
+\end{thebibliography}
+
+\end{document}
